@@ -35,6 +35,6 @@ my_dict = {
 res = dict()
 for key, value in my_dict.items():
     if lower_limit <= value <= upper_limit:
-        print("Match : " + str(key))
+        print("Match : " + key)
 
 
