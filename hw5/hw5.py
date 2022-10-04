@@ -32,7 +32,6 @@ my_dict = {
 "rozetka": 38.003
 }
 
-res = dict()
 for key, value in my_dict.items():
     if lower_limit <= value <= upper_limit:
         print("Match : " + key)
