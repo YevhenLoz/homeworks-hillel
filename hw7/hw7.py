@@ -31,7 +31,7 @@ def year_form():
     form2 = 'роки'
     form3 = 'років'
 
-    if userinput.endswith('1') and len(userinput) == 1:
+    if userinput.startswith('1') and len(userinput) == 1:
         year = form1
     elif userinput.endswith('1') and userinput.startswith(('2', '3', '4', '5', '6', '7', '8', '9', '10', '12')):
         year = form1
