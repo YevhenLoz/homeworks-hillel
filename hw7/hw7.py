@@ -16,6 +16,7 @@
 # Не забувайте, що кожна функція має виконувати тільки одне завдання і про правила написання коду.
 
 def check_age():
+
     userinput = input('Будь-ласка, введіть ваш вік: ')
 
     if userinput.isalpha() or not userinput.isdigit():
@@ -25,8 +26,8 @@ def check_age():
 
 userinput = check_age()
 
+def year_form(userinput):
 
-def year_form():
     form1 = 'рік'
     form2 = 'роки'
     form3 = 'років'
@@ -42,27 +43,26 @@ def year_form():
     return year
 
 
-year = year_form()
-
+year = year_form(userinput)
 
 def print_dialog():
     if userinput.isdigit():
-        ageint = int(userinput)
-        if '7' in str(ageint) and ageint < 120:
-            print(f'Вам {ageint} {year}, вам пощастить')
+        age_int = int(userinput)
+        if '7' in str(age_int) and ageint < 120:
+            print(f'Вам {age_int} {year}, вам пощастить')
         else:
-            if 0 < ageint < 7:
-                print(f'Тобі ж {ageint} {year}! Де твої батьки?')
-            elif 7 < ageint < 16:
-                print(f'Тобі лише {ageint} {year}, а це це фільм для дорослих!')
-            elif 120 >= ageint > 65:
-                print(f'Вам {ageint} {year}? Покажіть пенсійне посвідчення!')
-            elif ageint > 120:
-                print(f'Вам {ageint} {year}? Стільки не живуть!')
-            elif ageint == 0:
+            if 0 < age_int < 7:
+                print(f'Тобі ж {age_int} {year}! Де твої батьки?')
+            elif 7 < age_int < 16:
+                print(f'Тобі лише {age_int} {year}, а це це фільм для дорослих!')
+            elif 120 >= age_int > 65:
+                print(f'Вам {age_int} {year}? Покажіть пенсійне посвідчення!')
+            elif age_int > 120:
+                print(f'Вам {age_int} {year}? Стільки не живуть!')
+            elif age_int == 0:
                 print('Введіть справжній вік!')
             else:
-                print(f'Незважаючи на те, що вам {ageint} {year}, білетів все одно нема!')
+                print(f'Незважаючи на те, що вам {age_int} {year}, білетів все одно нема!')
 
 
 print_dialog()
