@@ -45,7 +45,7 @@ def year_form(userinput):
 
 year = year_form(userinput)
 
-def print_dialog():
+def print_dialog(userinput):
     if userinput.isdigit():
         age_int = int(userinput)
         if '7' in str(age_int) and ageint < 120:
@@ -65,4 +65,4 @@ def print_dialog():
                 print(f'Незважаючи на те, що вам {age_int} {year}, білетів все одно нема!')
 
 
-print_dialog()
+print_dialog(userinput)
