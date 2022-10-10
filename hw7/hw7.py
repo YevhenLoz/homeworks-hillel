@@ -48,7 +48,7 @@ year = year_form(userinput)
 def print_dialog(userinput):
     if userinput.isdigit():
         age_int = int(userinput)
-        if '7' in str(age_int) and ageint < 120:
+        if '7' in str(age_int) and age_int < 120:
             print(f'Вам {age_int} {year}, вам пощастить')
         else:
             if 0 < age_int < 7:
