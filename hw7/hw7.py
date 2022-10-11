@@ -24,8 +24,6 @@ def check_age():
     return userinput
 
 
-userinput = check_age()
-
 def year_form(userinput):
 
     form1 = 'рік'
@@ -43,12 +41,13 @@ def year_form(userinput):
     return year
 
 
-year = year_form(userinput)
 
-def print_dialog(userinput):
+def print_dialog():
+    userinput = check_age()
+    year = year_form(userinput)
     if userinput.isdigit():
         age_int = int(userinput)
-        if '7' in str(age_int) and ageint < 120:
+        if '7' in str(age_int) and age_int < 120:
             print(f'Вам {age_int} {year}, вам пощастить')
         else:
             if 0 < age_int < 7:
@@ -65,4 +64,6 @@ def print_dialog(userinput):
                 print(f'Незважаючи на те, що вам {age_int} {year}, білетів все одно нема!')
 
 
-print_dialog(userinput)
+
+print_dialog()
+
