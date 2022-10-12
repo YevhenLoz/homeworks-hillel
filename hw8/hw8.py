@@ -1,7 +1,10 @@
 
 def list_to_int_decorator(func):
-
+    '''
+    Function to convert function result to string
+    '''
     def wrapper(*args, **kwargs):
+
         res = func(*args, **kwargs)
         listToStr = ' '.join([str(elem) for elem in my_list])
         print('Result converted to string: ' + listToStr)
