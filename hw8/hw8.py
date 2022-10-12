@@ -14,14 +14,14 @@ def list_to_int_decorator(func):
 
 
 @list_to_int_decorator
-def my_function1(lst1):
+def add_element_to_list(lst1):
 
     lst1.append(1)
 
     return lst1
 
 my_list = [1, 2, 3]
-my_list = my_function1(my_list)
+my_list = add_element_to_list(my_list)
 
 
 
