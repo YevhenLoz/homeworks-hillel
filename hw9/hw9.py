@@ -7,13 +7,13 @@ def even_odd_checker(num):
     :param num:
     :return: True or False
     """
-    if num % 2:
-        return True
-    else:
+    if num & 1:
         return False
+    else:
+        return True
 
 
-m = 6
+m = int(input('Enter number: '))
 
 if even_odd_checker(m):
     print(m, "is an even number")
@@ -25,8 +25,8 @@ print(type(even_odd_checker(m)))
 
 assert type(even_odd_checker(m)) is bool, 'Function should return bool'
 assert type(m) is int, 'Function should receive int'
-assert m >= 0, 'Function should receive positive numbers'
-
+assert even_odd_checker(5) is False, 'If number is odd function should return False'
+assert even_odd_checker(6) is True, 'If number is even function should return True'
 
 
 
@@ -43,25 +43,26 @@ def check_capitalize(text):
     :param text:
     :return: True or False
     """
-    if text == text.capitalize():
+    if text == text.capitalize() and not text[0].isdigit() and not text[0].isspace():
         return True
     else:
         return False
 
 
-text = ' Aaron'
+text = input('Enter string: ')
 
 if check_capitalize(text):
     print('String capitalized')
 else:
-    print('String starts in lower case')
+    print('String not capitalized')
 
 print(type(check_capitalize(text)))
 
 assert type(check_capitalize(text)) is bool, 'Function should return bool'
 assert type(text) == str, 'Function should receive string'
-
-
+assert check_capitalize('Good') is True, 'If string capitalized function should return true'
+assert check_capitalize('good') is False, 'If string starts in lower case function should return False'
+assert check_capitalize('GOOD') is False, 'When first char is uppercase and the rest are lowercase func return False'
 
 # 3. написати декоратор, який додає принт з результатом роботи отриманої функції + текстовий параметр,
 # отриманий ним (декоратор з параметром - це там, де три функції)
