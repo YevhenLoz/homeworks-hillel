@@ -1,5 +1,4 @@
-#1. напишіть функцію, яка перевірить, чи передане їй число є парним чи непарним (повертає True False)
-
+# 1. напишіть функцію, яка перевірить, чи передане їй число є парним чи непарним (повертає True False)
 
 def is_number_even(number):
 
@@ -19,8 +18,7 @@ assert is_number_even(2.5) is False, 'If number is odd function should return Fa
 # 2. напишіть функцію. яка приймає стрічку, і визначає, чи дана стрічка відповідає
 # результатам роботи методу capitalize()
 # (перший символ є верхнім регістром, а решта – нижнім.) (повертає True False)
-#написати до кожної функції мінімум 5 assert
-
+# написати до кожної функції мінімум 5 assert
 
 
 def is_string_capitalize(string):
@@ -37,12 +35,9 @@ assert is_string_capitalize('aaron is good looking noob') is False
 assert is_string_capitalize('Aaron' * 2) is False
 assert is_string_capitalize('123') is True
 
-
-
-
 # 3. написати декоратор, який додає принт з результатом роботи отриманої функції + текстовий параметр,
 # отриманий ним (декоратор з параметром - це там, де три функції)
-# # при цьому очікувані результати роботи функції не змінюються (декоратор просто добавляє принт)
+# при цьому очікувані результати роботи функції не змінюються (декоратор просто додає принт)
 
 
 def add_result_and_text(txt: str):
@@ -60,10 +55,10 @@ def add_result_and_text(txt: str):
 
 
 @add_result_and_text('i am sure result is')
-def add_element_to_list(list):
-    list.append(1)
+def add_element_to_list(my_list):
+    my_list.append(1)
 
-    return list
+    return my_list
 
 
 my_list = [1, 2, 3]
