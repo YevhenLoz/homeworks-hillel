@@ -4,7 +4,7 @@ print('Задача 1')
 def even_odd_checker(num):
     """
     Function checks the number is even or odd
-    :param num:
+    :param num(int):
     :return: True or False
     """
     if num & 1:
@@ -19,8 +19,6 @@ if even_odd_checker(m):
     print(m, "is an even number")
 else:
     print(m, "is an odd number")
-
-print(type(even_odd_checker(m)))
 
 
 assert type(even_odd_checker(m)) is bool, 'Function should return bool'
@@ -40,9 +38,10 @@ print('Задача 2')
 def check_capitalize(text):
     """
     Function to check is string is capitalized or not
-    :param text:
+    :param text(str):
     :return: True or False
     """
+
     if text == text.capitalize() and not text[0].isdigit() and not text[0].isspace():
         return True
     else:
@@ -56,7 +55,6 @@ if check_capitalize(text):
 else:
     print('String not capitalized')
 
-print(type(check_capitalize(text)))
 
 assert type(check_capitalize(text)) is bool, 'Function should return bool'
 assert type(text) == str, 'Function should receive string'
