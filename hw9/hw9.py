@@ -1,6 +1,11 @@
 # 1. напишіть функцію, яка перевірить, чи передане їй число є парним чи непарним (повертає True False)
 
 def is_number_even(number):
+    '''
+    Function checks whether the number is even or odd
+    :param number(int or float):
+    :return: True or False
+    '''
 
     if number % 2 == 0:
         return True
@@ -22,6 +27,11 @@ assert is_number_even(2.5) is False, 'If number is odd function should return Fa
 
 
 def is_string_capitalize(string):
+    '''
+    Function that checks whether string is match the results of the capitalize() method
+    :param string(str):
+    :return: True or False
+    '''
 
     if string == string.capitalize():
         return True
@@ -41,8 +51,14 @@ assert is_string_capitalize('123') is True
 
 
 def add_result_and_text(txt: str):
+    '''
+    Decorator that adds a print with the result of the received function and the text parameter it received
+    :param txt(str):
+    '''
+
 
     def real_decorator(func):
+
         def wrapper(*args, **kwargs):
             new_list = func(*args, **kwargs)
             print(txt, new_list)
