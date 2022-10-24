@@ -65,8 +65,6 @@ account1.deposit(500)
 account1.withdraw(100)
 account2 = BankAccount('Tom Dirt', 100, 8)
 account1.transfer_money(500, account2)
-print(account2.get_todays_profit)
-print(account1.get_todays_profit)
 BankAccount.bank_slogan()
 
 
