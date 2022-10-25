@@ -48,10 +48,12 @@ class BankAccount:
         if self.balance >= amount:
             self.balance -= amount
 
+
 # створіть метод трансфер, який дозволяє переводити кошти з одного рахунку на інший
     def transfer_money(self, amount, account):
-        self.balance -= amount
-        account.balance += amount
+        if self.balance >= amount:
+            self.balance -= amount
+            account.balance += amount
 
     def __del__(self):
         print(f' {self.name}, your account is closed due to Bank liquidation, refund amount is {self.balance}')
@@ -74,9 +76,9 @@ class BankAccount:
 account1 = BankAccount('Tom Clean', 100, 7)
 account1.get_interest = 2
 account1.deposit(500.50)
-account1.withdraw(100)
+account1.withdraw(600)
 account2 = BankAccount('Tom Dirt', 100, 8)
-account1.transfer_money(500, account2)
+account1.transfer_money(0.50, account2)
 print(account1)
 print(account2)
 account3 = BankAccount('Tom Saint', 770, 7)
