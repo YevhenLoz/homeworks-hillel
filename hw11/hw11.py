@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 from random import randint
 from faker import Faker
 
-
 fake = Faker()
 
 
@@ -54,8 +53,8 @@ class School:
         self.school_name = school_name
         self.principal = school_principal
         self.faculty = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin']
-        self.teachers = [Teacher(fake.name(), randint(10000, 50000)) for i in range(number_of_teachers)]
-        self.technicians = [Technician(fake.name(), randint(3000, 6000)) for i in range(number_of_technicians)]
+        self.teachers = [Teacher(fake.name(), randint(10000, 50000)) for _ in range(number_of_teachers)]
+        self.technicians = [Technician(fake.name(), randint(3000, 6000)) for _ in range(number_of_technicians)]
 
     @property
     def assign_teacher_to_faculty(self):
@@ -98,7 +97,9 @@ hogwarts = School('Hogwarts', Teacher('Albus Dumbledore', 100_000))
 list_of_teachers = hogwarts.teachers
 hogwarts_salary = hogwarts.school_total_salary
 hogwarts.teachers.append(Teacher('Severus Snape', 90_000))
+hogwarts_salary2 = hogwarts.school_total_salary
 list_of_teachers2 = hogwarts.teachers
 hogwarts.appoint_new_principal()
 list_of_teachers3 = hogwarts.teachers
 assign_to_faculty = hogwarts.assign_teacher_to_faculty
+print()
