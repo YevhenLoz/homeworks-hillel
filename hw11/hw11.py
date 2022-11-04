@@ -102,4 +102,3 @@ list_of_teachers2 = hogwarts.teachers
 hogwarts.appoint_new_principal()
 list_of_teachers3 = hogwarts.teachers
 assign_to_faculty = hogwarts.assign_teacher_to_faculty
-print()
