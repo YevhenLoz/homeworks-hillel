@@ -40,7 +40,7 @@ class Technician(SchoolPersonnel):
         return f'Technician {self.name}, {self.salary}'
 
     def __repr__(self):
-        return f'Teacher {self.name}'
+        return f'Technician {self.name}'
 
 
 class School:
