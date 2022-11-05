@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from random import randint
 from faker import Faker
 
+
 fake = Faker()
 
 
@@ -57,7 +58,7 @@ class School:
         self.technicians = [Technician(fake.name(), randint(3000, 6000)) for _ in range(number_of_technicians)]
 
     def __str__(self):
-        return f'School {self.school_name}, {self.principal}, {self.faculty}'
+        return f'School {self.school_name}, Principal: {self.principal}, Faculties: {self.faculty}'
 
     @property
     def assign_teacher_to_faculty(self):
@@ -98,6 +99,7 @@ class School:
 
 hogwarts = School('Hogwarts', Teacher('Albus Dumbledore', 100_000), ['Gryffindor', 'Hufflepuff', 'Ravenclaw',
                                                                      'Slytherin'])
+durmstrang = School('Durmstrang', Teacher('Viktor Karkarov', 300_000), ['Dark Arts', 'White Magic'])
 list_of_teachers = hogwarts.teachers
 hogwarts_salary = hogwarts.school_total_salary
 hogwarts.teachers.append(Teacher('Severus Snape', 90_000))
@@ -106,3 +108,8 @@ list_of_teachers2 = hogwarts.teachers
 hogwarts.appoint_new_principal()
 list_of_teachers3 = hogwarts.teachers
 assign_to_faculty = hogwarts.assign_teacher_to_faculty
+list_of_teachers4 = durmstrang.teachers
+durmstrang_salary = durmstrang.school_total_salary
+durmstrang.teachers.append(Teacher('Viktor Kram', 300_000))
+durmstrang.appoint_new_principal()
+print()
