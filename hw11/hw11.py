@@ -48,13 +48,16 @@ class School:
     This is class School
     """
 
-    def __init__(self, school_name: str, school_principal: Teacher, number_of_teachers: int = 5,
+    def __init__(self, school_name: str, school_principal: Teacher, faculty: list, number_of_teachers: int = 5,
                  number_of_technicians: int = 3):
         self.school_name = school_name
         self.principal = school_principal
-        self.faculty = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin']
+        self.faculty = faculty
         self.teachers = [Teacher(fake.name(), randint(10000, 50000)) for _ in range(number_of_teachers)]
         self.technicians = [Technician(fake.name(), randint(3000, 6000)) for _ in range(number_of_technicians)]
+
+    def __str__(self):
+        return f'School {self.school_name}, {self.principal}, {self.faculty}'
 
     @property
     def assign_teacher_to_faculty(self):
@@ -93,7 +96,8 @@ class School:
         self.teachers.append(former_principal)
 
 
-hogwarts = School('Hogwarts', Teacher('Albus Dumbledore', 100_000))
+hogwarts = School('Hogwarts', Teacher('Albus Dumbledore', 100_000), ['Gryffindor', 'Hufflepuff', 'Ravenclaw',
+                                                                     'Slytherin'])
 list_of_teachers = hogwarts.teachers
 hogwarts_salary = hogwarts.school_total_salary
 hogwarts.teachers.append(Teacher('Severus Snape', 90_000))
