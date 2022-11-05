@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 from random import randint
 from faker import Faker
 
-
 fake = Faker()
 
 
@@ -112,4 +111,3 @@ list_of_teachers4 = durmstrang.teachers
 durmstrang_salary = durmstrang.school_total_salary
 durmstrang.teachers.append(Teacher('Viktor Kram', 300_000))
 durmstrang.appoint_new_principal()
-print()
