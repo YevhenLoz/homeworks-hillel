@@ -1,5 +1,4 @@
 from abc import abstractmethod
-
 from hw25.classification.Animal import Animals
 
 
