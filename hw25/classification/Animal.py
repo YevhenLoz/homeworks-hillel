@@ -1,8 +1,11 @@
 from abc import ABC, abstractmethod
 
 
+# Abstraction
 class Animals(ABC):
 
     @abstractmethod
-    def get_info(self):
-        pass
+    def movement(self): ...
+
+    @abstractmethod
+    def get_info(self): ...
